@@ -776,7 +776,7 @@ function __bobthefish_prompt_git -S -a current_dir -d 'Display the actual git st
   end
 
   set -l flags "$dirty$staged$stashed$ahead$new"
-  [ "$flags" ]
+  [ "$flags" -o "$theme_powerline_fonts" = "no" ]
     and set flags " $flags"
 
   set -l flag_colors $color_repo
